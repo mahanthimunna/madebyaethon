@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L-System Trees — Mahanthi Kannapalli</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page" style="--project-bg: url('images/lsystem-bg.png');">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="project-backdrop" aria-hidden="true"></div>
+  <nav class="nav-shell" aria-label="Primary navigation">
+  <a class="brand-mark" href="index.html#top" aria-label="Mahanthi Kannapalli home">
+    <span class="brand-monogram">MK</span>
+    <span class="brand-copy"><strong>MAHANTHI KANNAPALLI</strong><small>Gameplay Programmer · Systems Designer</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="primary-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#systems">Systems</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+  <main class="project-shell">
+    <header class="project-case-hero reveal">
+      <div class="project-hero-art"><div class="project-art-frame"></div></div>
+      <div class="project-hero-copy">
+        <a class="back-pill" href="index.html#systems"><i class='bx bx-left-arrow-alt'></i> Back to vault</a>
+        <p class="kicker">Case File</p>
+        <h1>L-System Trees</h1>
+        <p>Procedural Tree Generation – Grammar Expansion + 3D Transform Rules</p>
+        <div class="chip-row"><span>Procedural Modeling</span><span>L-Systems</span><span>3D Generation</span></div>
+      </div>
+    </header>
+
+    <section class="project-overview-grid">
+      <article class="case-note reveal"><h2>Overview</h2><div class="note-body"><p>Procedural Tree Generation – Grammar Expansion + 3D Transform Rules</p></div></article>
+    </section>
+
+    <section class="project-media reveal"><h2>Developer Walk-through</h2><div class="video-frame"><iframe src="https://www.youtube.com/embed/XJjOSvqqi0k" title="L-System Trees – Developer Walk-through" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></section>
+    <section class="project-accordion-section reveal"><div class="section-heading compact"><p class="kicker">Build Notes</p><h2>Systems & Responsibilities</h2></div><div class="accordion"><article class="accordion-item open">
+  <button class="accordion-header" type="button" aria-expanded="true">
+    <span><i class='bx bx-cube-alt'></i>OVERVIEW</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>This system generates 3D tree structures using L-system grammar expansion (formal rewrite rules).
+                    The expanded string is interpreted into branching instructions and transformed into a tree-like form.</p></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>CORE LOGIC</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Start with an axiom, apply rewrite rules over multiple iterations, then interpret symbols as actions
+                    (move forward, rotate, push/pop state) to form branching geometry. This supports controllable complexity.</p></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>PARAMETERS / VARIATIONS</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Iteration count, segment length, branch angle, randomness, thickness scaling, and rule sets.
+                    These knobs let you produce many silhouettes quickly for procedural scenes.</p></div></div>
+</article></div></section>
+
+    <a class="return-link reveal" href="index.html#systems"><i class='bx bx-left-arrow-alt'></i> Return to the vault</a>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

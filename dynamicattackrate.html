@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Attack Rate — Mahanthi Kannapalli</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page" style="--project-bg: url('images/dynamic-attack-rate.png');">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="project-backdrop" aria-hidden="true"></div>
+  <nav class="nav-shell" aria-label="Primary navigation">
+  <a class="brand-mark" href="index.html#top" aria-label="Mahanthi Kannapalli home">
+    <span class="brand-monogram">MK</span>
+    <span class="brand-copy"><strong>MAHANTHI KANNAPALLI</strong><small>Gameplay Programmer · Systems Designer</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="primary-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#systems">Systems</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+  <main class="project-shell">
+    <header class="project-case-hero reveal">
+      <div class="project-hero-art"><div class="project-art-frame"></div></div>
+      <div class="project-hero-copy">
+        <a class="back-pill" href="index.html#projects"><i class='bx bx-left-arrow-alt'></i> Back to vault</a>
+        <p class="kicker">Case File</p>
+        <h1>Dynamic Attack Rate</h1>
+        <p>Dynamic combat prototype – Unreal Engine 5</p>
+        <div class="chip-row"><span>Unreal 5</span><span>Blueprints</span><span>Combat Systems</span></div>
+      </div>
+    </header>
+
+    <section class="project-overview-grid">
+      <article class="case-note reveal"><h2>Overview</h2><div class="note-body"><p>Dynamic combat prototype – Unreal Engine 5</p></div></article>
+    </section>
+
+    <section class="project-media reveal"><h2>EXPRESSION</h2><div class="media-expression"><img src="images/dynamic-attack-rate.png" alt="Expression Image" loading="lazy" /></div><div class="video-frame"><iframe src="https://www.youtube.com/embed/bGgxUAT7d_k" title="Dynamic Attack Rate – Developer Walk-through" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></section>
+    <section class="project-accordion-section reveal"><div class="section-heading compact"><p class="kicker">Build Notes</p><h2>Systems & Responsibilities</h2></div><div class="accordion"><article class="accordion-item open">
+  <button class="accordion-header" type="button" aria-expanded="true">
+    <span><i class='bx bx-cube-alt'></i>Player Attack Rate Function — Blueprint Implementation</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>This Blueprint function calculates the player’s Dynamic Attack Rate by iterating
+through stored combat data for each enemy. It performs multiple summations —
+including weighted attack impact (WiHi), penalty modifiers (PjMj), and temporal
+decay factors (T and G) — to produce a balanced metric reflecting real-time
+combat performance.</p><div class="accordion-gallery"><img src="images/DARBPImplementation.png" alt="Player Attack Rate Function — Blueprint Implementation" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Summation of Wi (Weighted Hits)</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Calculates the total contribution of each successful attack weighted by importance,
+using exponential decay to reduce the influence of older actions.</p><div class="accordion-gallery"><img src="images/SumofWi.png" alt="Summation of Wi (Weighted Hits)" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Summation of WiHi and PjMj</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Computes the weighted impact of successful hits (WiHi) and accumulated penalties
+for missed attacks (PjMj), both processed with time-based decay.</p><div class="accordion-gallery"><img src="images/SumofWiHiandPjMj.png" alt="Summation of WiHi and PjMj" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Summation of T and G</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Handles temporal spacing and global gameplay gap modifiers to stabilize the
+dynamic formula and maintain fairness.</p><div class="accordion-gallery"><img src="images/SumofTandG.png" alt="Summation of T and G" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Final Output (Attack Rate Calculation)</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Combines all calculated parameters into a normalized Attack Rate output that
+drives combat performance and ability unlocks.</p><div class="accordion-gallery"><img src="images/FinalOutput.png" alt="Final Output (Attack Rate Calculation)" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Enemy Attack Data Structure and Map Setup</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Defines EnemyAttackData structures and maps to track per-enemy combat history,
+ensuring accurate and isolated calculations.</p><div class="accordion-gallery"><img src="images/DSandMapSetup_01.png" alt="Enemy Attack Data Structure and Map Setup" loading="lazy" /><img src="images/DSandMapSetup_02.png" alt="Enemy Attack Data Structure and Map Setup" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Damage Calculation Blueprint</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Handles hit detection, damage application, attack data logging, and feedback
+triggering for responsive combat interactions.</p><div class="accordion-gallery"><img src="images/DamageCalBP.png" alt="Damage Calculation Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Finisher Attack Blueprint Implementation</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Executes cinematic finisher attacks using root motion, targeting logic,
+state locking, and data resets.</p><div class="accordion-gallery"><img src="images/FinisherAttackBP.png" alt="Finisher Attack Blueprint Implementation" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Equip and Unequip Weapon System</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Mouse-wheel driven weapon equip and sheath system with animation and socket
+attachment handling.</p><div class="accordion-gallery"><img src="images/EquipandUnequip.png" alt="Equip and Unequip Weapon System" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Target System Component Setup</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Modular targeting component handling enemy locking, switching, and camera focus.</p><div class="accordion-gallery"><img src="images/TargetandCompSetup_01.png" alt="Target System Component Setup" loading="lazy" /><img src="images/TargetandCompSetup_02.png" alt="Target System Component Setup" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>Attack Montage Setup and Animation Blueprint Integration</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Integrates attack montages with animation notifies for damage timing,
+combo control, and finisher activation.</p><div class="accordion-gallery"><img src="images/ABP_01.png" alt="Attack Montage Setup and Animation Blueprint Integration" loading="lazy" /><img src="images/ABP_02.png" alt="Attack Montage Setup and Animation Blueprint Integration" loading="lazy" /></div></div></div>
+</article></div></section>
+
+    <a class="return-link reveal" href="index.html#projects"><i class='bx bx-left-arrow-alt'></i> Return to the vault</a>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echos of Lie — Mahanthi Kannapalli</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page" style="--project-bg: url('images/echos-of-lie.png');">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="project-backdrop" aria-hidden="true"></div>
+  <nav class="nav-shell" aria-label="Primary navigation">
+  <a class="brand-mark" href="index.html#top" aria-label="Mahanthi Kannapalli home">
+    <span class="brand-monogram">MK</span>
+    <span class="brand-copy"><strong>MAHANTHI KANNAPALLI</strong><small>Gameplay Programmer · Systems Designer</small></span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="primary-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#systems">Systems</a>
+    <a href="index.html#resume">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+  <main class="project-shell">
+    <header class="project-case-hero reveal">
+      <div class="project-hero-art"><div class="project-art-frame"></div></div>
+      <div class="project-hero-copy">
+        <a class="back-pill" href="index.html#projects"><i class='bx bx-left-arrow-alt'></i> Back to vault</a>
+        <p class="kicker">Case File</p>
+        <h1>Echos of Lie</h1>
+        <p>First-Person Horror Game – Unreal Engine 5</p>
+        <div class="chip-row"><span>Unreal 5</span><span>Blueprints</span><span>Horror</span></div>
+      </div>
+    </header>
+
+    <section class="project-overview-grid">
+      <article class="case-note reveal"><h2>Overview</h2><div class="note-body"><p>First-Person Horror Game – Unreal Engine 5</p></div></article>
+    </section>
+
+    <section class="project-media reveal"><h2>GAMEPLAY VIDEO</h2><div class="video-frame"><iframe src="https://www.youtube.com/embed/IXkhcE3dNX0?si=AmenC_4S_tS9IC3n" title="Echos of Lie – Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></section>
+    <section class="project-accordion-section reveal"><div class="section-heading compact"><p class="kicker">Build Notes</p><h2>Systems & Responsibilities</h2></div><div class="accordion"><article class="accordion-item open">
+  <button class="accordion-header" type="button" aria-expanded="true">
+    <span><i class='bx bx-cube-alt'></i>LEVEL SWITCHING</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Sanity amount is checked every second,
+                            based on the player Sanity level, Levels
+                            will be streamed Dynamically during Gameplay.</p><div class="accordion-gallery"><img src="images/LevelSwitch_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/LevelSwitch_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/LevelSwitch_02.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>SANITY EFFECT</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Increase in Sanity will cause player to feel hallucinating
+                            with slowing down all the player actions.</p><p>To show screen effects I’ve changed the post-process
+                            settings of FPS camera in First Person Blueprint for
+                            few seconds and made it back to normal.</p><div class="accordion-gallery"><img src="images/SanityEffect_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/SanityEffect_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/SanityEffect_02.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>LISTEN MODE</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Enemies can be seen through walls</p><p>Created a Post-Process Material and added in Material
+                            Asset for Post-Process Volume, changed the value with
+                            RMB clicked during gameplay.</p><p>This material when activated changed the whole into
+                            the b/w effect and shows the actors that has Stencil
+                            Value more than 1 in red colored even through the walls.</p><p>I only want to see enemies through the walls,
+                            so I changed the custom Stencil Depth value of
+                            Enemy actors to 2.</p><div class="accordion-gallery"><img src="images/ListenMode_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/ListenMode_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/ListenMode_02.png" alt="FSM Blueprint" loading="lazy" /><img src="images/ListenMode_03.png" alt="FSM Blueprint" loading="lazy" /><img src="images/ListenMode_04.png" alt="FSM Blueprint" loading="lazy" /><img src="images/ListenMode_05.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>CLOAK MODE</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Player can be able to hide in the locker,
+                            will make enemy to forget about the player
+                            and behaves normal until sees again.</p><div class="accordion-gallery"><img src="images/CloakMode_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/CloakMode_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/CloakMode_02.png" alt="FSM Blueprint" loading="lazy" /><img src="images/CloakMode_03.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>LOCK TARGET AND ATTACK MECHANICS</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Used an Actor Component Blueprint to write down
+                            Target Lock system, attack mechanics including
+                            Combo attacks where player can be able to lock the
+                            camera to the specific enemy the player targeting
+                            to and attack.</p><div class="accordion-gallery"><img src="images/LockAndAttack_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/LockAndAttack_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/LockAndAttack_02.png" alt="FSM Blueprint" loading="lazy" /><img src="images/LockAndAttack_03.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>DYNAMIC FOOTSTEP SOUND</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Used an Anim Notifier Blueprint to play sound
+                            at each step and created physics materials for the
+                            specific type of the floor to adjust sound dynamically.</p><div class="accordion-gallery"><img src="images/DFootSound_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/DFootSound_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/DFootSound_02.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>QUICK TIME EVENT (QTE) SYSTEM SETUP</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>I designed the Quick Time Event (QTE) system using a
+                            combination of structures, enums, and macros for better
+                            organization and modularity.</p><p>I created an ENUM_EventState to define different
+                            event states such as Waiting, Success, TimeUp, and
+                            IncorrectKey. Then, I built multiple structures like
+                            S_EventData (for key input, screen position, and time
+                            tracking), S_CameraTransition (for smooth camera changes
+                            during QTEs), and S_EventWidget (for UI anchor, alignment,
+                            and offset details).</p><p>All these elements connect through the StartQuickTimeEvent
+                            Macro, which manages event flow—starting from player input
+                            detection, triggering UI feedback, checking success or
+                            failure conditions, and finally transitioning cameras
+                            smoothly based on results.</p><p>This setup allows each QTE to have its own customizable
+                            parameters like duration, screen position, and camera
+                            blend time while keeping the system reusable and easy
+                            to update.</p><div class="accordion-gallery"><img src="images/QTE_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_02.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_03.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_04.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_05.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_06.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_07.png" alt="FSM Blueprint" loading="lazy" /><img src="images/QTE_08.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article><article class="accordion-item">
+  <button class="accordion-header" type="button" aria-expanded="false">
+    <span><i class='bx bx-cube-alt'></i>ANIMATED POP-UP NOTIFICATION</span><i class='bx bx-plus'></i>
+  </button>
+  <div class="accordion-content"><div><p>Created animated pop-up text for objectives,
+                            controls, and player instructions during gameplay.
+                            The text smoothly appears from the top-right corner
+                            of the screen with a sound effect.</p><div class="accordion-gallery"><img src="images/AnimNot_00.png" alt="FSM Blueprint" loading="lazy" /><img src="images/AnimNot_01.png" alt="FSM Blueprint" loading="lazy" /><img src="images/AnimNot_02.png" alt="FSM Blueprint" loading="lazy" /><img src="images/AnimNot_03.png" alt="FSM Blueprint" loading="lazy" /></div></div></div>
+</article></div></section>
+
+    <a class="return-link reveal" href="index.html#projects"><i class='bx bx-left-arrow-alt'></i> Return to the vault</a>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
